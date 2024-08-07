@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "Data Scraper",
+    "version": "1.0",
+    "description": "Scrape data from a specific URL",
+    "permissions": [
+      "activeTab",
+      "tabs"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://seatgeek.com/jessica-pratt-tickets/columbus-ohio-ace-of-cups-2024-09-14-6-pm/concert/16944780"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
